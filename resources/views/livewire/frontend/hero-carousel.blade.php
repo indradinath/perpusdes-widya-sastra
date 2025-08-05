@@ -1,5 +1,5 @@
 {{-- resources/views/livewire/frontend/hero-carousel.blade.php --}}
-<div> 
+<div>
     @if($banners->count() > 0)
         <div id="heroCarousel" class="carousel slide w-100" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -31,8 +31,8 @@
             </button>
         </div>
     @else
-        <img class="masthead-avatar mb-5" src="{{asset('template/assets/img/avataaars.svg')}}" alt="..." />
+        {{-- <img class="masthead-avatar mb-5" src="{{asset('template/assets/img/avataaars.svg')}}" alt="..." />
         <h1 class="masthead-heading text-uppercase mb-0">PERPUSDES WIDYA SASTRA</h1>
-        <p class="masthead-subheading font-weight-light mb-0">Meningkatkan Literasi, Membangun Masyarakat Cerdas</p>
+        <p class="masthead-subheading font-weight-light mb-0">Meningkatkan Literasi, Membangun Masyarakat Cerdas</p> --}}
     @endif
 </div>
