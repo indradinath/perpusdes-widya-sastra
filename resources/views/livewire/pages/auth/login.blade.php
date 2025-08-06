@@ -22,7 +22,9 @@ new #[Layout('layouts1.guest')] class extends Component
         Session::regenerate();
 
         $user = Auth::user();
-        if ($user->role === 'Admin') {
+        if ($user->role === 'Superadmin') {
+            $this->redirect(route('admin.dashboard.index', absolute: false), navigate: true);
+        } elseif ($user->role === 'Admin') {
             $this->redirect(route('admin.dashboard.index', absolute: false), navigate: true);
         } elseif ($user->role === 'Anggota') {
             $this->redirect(route('anggota.dashboard.index', absolute: false), navigate: true);
@@ -38,7 +40,7 @@ new #[Layout('layouts1.guest')] class extends Component
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form wire:submit="login">
+    <form wire:submit.prevent="login">
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
