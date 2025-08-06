@@ -126,7 +126,7 @@
                                         <li>
                                             <img src="{{ asset('/public/adminlte3/dist/img/user_anggota.png') }}" alt="User Image"> {{-- Ganti dengan gambar default user --}}
                                             <a class="users-list-name" href="#">{{ $member->nama }}</a>
-                                            <span class="users-list-date">{{ $member->created_at->diffForHumans() }}</span>
+                                            <span class="users-list-date">{{ $member->created_at ? $member->created_at->diffForHumans() : '-' }}</span>
                                         </li>
                                     @empty
                                         <li>Tidak ada anggota baru.</li>
