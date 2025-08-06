@@ -24,9 +24,9 @@
                 </div>
 
                 @if($book->gambar_sampul)
-                    <img class="img-fluid" src="{{ asset('storage/' . $book->gambar_sampul) }}" alt="{{ $book->judul }}" style="height: 250px; object-fit: cover; width: 100%;" />
+                    <img class="img-fluid" src="{{ asset('public/storage/' . $book->gambar_sampul) }}" alt="{{ $book->judul }}" style="height: 250px; object-fit: cover; width: 100%;" />
                 @else
-                    <img class="img-fluid" src="{{asset('template/assets/img/portfolio/default_book.png')}}" alt="Default Book Cover" style="height: 250px; object-fit: cover; width: 100%;" />
+                    <img class="img-fluid" src="{{asset('public/template/assets/img/portfolio/default_book.png')}}" alt="Default Book Cover" style="height: 250px; object-fit: cover; width: 100%;" />
                 @endif
 
                 <div class="book-info p-3">

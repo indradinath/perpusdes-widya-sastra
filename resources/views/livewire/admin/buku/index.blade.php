@@ -108,7 +108,7 @@
                                         <td><span class="badge badge-success">{{ $item->jumlah_tersedia }}</span></td>
                                         <td>
                                             @if ($item->gambar_sampul)
-                                                <img src="{{ asset('storage/' . $item->gambar_sampul) }}" alt="Sampul" style="width: 50px; height: 75px; object-fit: cover;">
+                                                <img src="{{ asset('public/storage/' . $item->gambar_sampul) }}" alt="Sampul" style="width: 50px; height: 75px; object-fit: cover;">
                                             @else
                                                 -
                                             @endif
