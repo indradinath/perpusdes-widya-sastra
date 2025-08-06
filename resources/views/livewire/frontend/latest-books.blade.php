@@ -6,14 +6,14 @@
                     <div class="portfolio-item-caption-content text-center text-white">
                         <i class="fas fa-magnifying-glass fa-3x"></i><br>
                         @auth
-                        @if(Auth::user()->role === 'Anggota')
-                            {{-- Jika anggota, arahkan ke halaman detail buku anggota --}}
-                            <a href="{{ route('anggota.buku.index', $book->id) }}" class="text-white text-decoration-none" wire:navigate>Lihat Detail</a>
-                        @elseif(Auth::user()->role === 'Admin')
-                            {{-- Jika admin, arahkan ke halaman detail buku admin --}}
+                        @if(Auth::user()->role === 'Superadmin' || Auth::user()->role === 'Admin')
+                            {{-- Jika Superadmin atau Admin, arahkan ke halaman detail di admin dashboard --}}
                             <a href="{{ route('admin.buku.index', $book->id) }}" class="text-white text-decoration-none" wire:navigate>Lihat Detail</a>
+                        @elseif(Auth::user()->role === 'Anggota')
+                            {{-- Jika Anggota, arahkan ke halaman detail di anggota dashboard --}}
+                            <a href="{{ route('anggota.buku.index', $book->id) }}" class="text-white text-decoration-none" wire:navigate>Lihat Detail</a>
                         @else
-                            {{-- Jika role lain (misal: user biasa tanpa role spesifik), bisa arahkan ke login atau halaman umum --}}
+                            {{-- Jika role tidak terdefinisi --}}
                             <a href="{{ route('login') }}" class="text-white text-decoration-none" wire:navigate>Login untuk Lihat Detail</a>
                         @endif
                     @else
