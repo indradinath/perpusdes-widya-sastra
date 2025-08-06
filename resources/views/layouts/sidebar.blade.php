@@ -2,7 +2,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{ route('home') }}" class="nav-link brand-link">
-        <img src="{{ asset('adminlte3/dist/img/logodesa.jpg') }}" alt="AdminLTE Logo" class="brand-image img-circle">
+        <img src="{{ asset('/public/adminlte3/dist/img/logodesa.jpg') }}" alt="AdminLTE Logo" class="brand-image img-circle">
         <span class="brand-text font-weight-light">PERPUSDES</span>
     </a>
 

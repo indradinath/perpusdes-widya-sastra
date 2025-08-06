@@ -15,8 +15,8 @@
                 $userImage = Auth::user()->role === 'Superadmin'
                 ? asset('adminlte3/dist/img/user_superadmin.png')
                 : (Auth::user()->role === 'Admin'
-                ? asset('adminlte3/dist/img/user_admin.png')
-                : asset('adminlte3/dist/img/user_anggota.png'));
+                ? asset('/public/adminlte3/dist/img/user_admin.png')
+                : asset('/public/adminlte3/dist/img/user_anggota.png'));
           @endphp
           <img src="{{ $userImage }}" class="user-image img-circle" alt="User Image">
           <span class="d-none d-md-inline">{{ Str::words(Auth::user()->nama, 2, '') }}</span>
