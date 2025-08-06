@@ -13,7 +13,7 @@
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
             @php
                 $userImage = Auth::user()->role === 'Superadmin'
-                ? asset('adminlte3/dist/img/user_superadmin.png')
+                ? asset('/public/adminlte3/dist/img/user_superadmin.png')
                 : (Auth::user()->role === 'Admin'
                 ? asset('/public/adminlte3/dist/img/user_admin.png')
                 : asset('/public/adminlte3/dist/img/user_anggota.png'));
