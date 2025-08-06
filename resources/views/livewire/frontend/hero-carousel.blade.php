@@ -11,7 +11,7 @@
                 @foreach($banners as $banner)
                     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                         <div class="carousel-img-ratio">
-                            <img src="{{ asset('storage/' . $banner->gambar) }}" class="d-block w-100 h-100" alt="{{ $banner->judul }}" style="object-fit: cover;">
+                            <img src="{{ asset('public/storage/' . $banner->gambar) }}" class="d-block w-100 h-100" alt="{{ $banner->judul }}" style="object-fit: cover;">
                         </div>
 
                         <div class="carousel-caption d-none d-md-block text-center bg-dark py-2 rounded" style="--bs-bg-opacity: .7;">

@@ -77,7 +77,7 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>
                                             @if ($item->gambar)
-                                                <img src="{{ asset('storage/' . $item->gambar) }}" alt="Banner" style="width: 100px; height: 60px; object-fit: cover;">
+                                                <img src="{{ asset('public/storage/' . $item->gambar) }}" alt="Banner" style="width: 100px; height: 60px; object-fit: cover;">
                                             @else
                                                 -
                                             @endif
