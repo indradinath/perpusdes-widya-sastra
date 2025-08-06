@@ -122,7 +122,7 @@
                         <div class="row">
                             <div class="col-md-4 text-center mb-3">
                                 @if ($detailBook->gambar_sampul)
-                                    <img src="{{ asset('storage/' . $detailBook->gambar_sampul) }}" alt="Sampul Buku" class="img-fluid rounded" style="max-height: 250px;">
+                                    <img src="{{ asset('public/storage/' . $detailBook->gambar_sampul) }}" alt="Sampul Buku" class="img-fluid rounded" style="max-height: 250px;">
                                 @else
                                     <i class="fas fa-book-open text-muted" style="font-size: 150px;"></i>
                                     <p class="text-muted mt-2">Tidak ada sampul</p>
