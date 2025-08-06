@@ -70,7 +70,7 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>
                                             @if ($item->gambar_sampul)
-                                                <img src="{{ asset('storage/' . $item->gambar_sampul) }}" alt="Sampul" style="width: 50px; height: auto;">
+                                                <img src="{{ asset('public/storage/' . $item->gambar_sampul) }}" alt="Sampul" style="width: 50px; height: auto;">
                                             @else
                                                 <i class="fas fa-image text-muted" style="font-size: 30px;"></i>
                                             @endif

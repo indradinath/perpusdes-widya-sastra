@@ -18,6 +18,7 @@ class Index extends Component
     use WithPagination;
     use WithFileUploads;
 
+    protected $paginationTheme = 'bootstrap';
     public $paginate = 10;
     public $search = '';
     public $book_id;
@@ -226,7 +227,7 @@ public function exportPdf()
         ->orderBy('judul', 'asc')
         ->get();
 
-    $pdf = Pdf::loadView('pdf.books', ['books' => $books, 'title' => 'Data Buku']); 
+    $pdf = Pdf::loadView('pdf.books', ['books' => $books, 'title' => 'Data Buku']);
     return response()->streamDownload(function () use ($pdf) {
         echo $pdf->stream();
     }, 'data_buku.pdf');

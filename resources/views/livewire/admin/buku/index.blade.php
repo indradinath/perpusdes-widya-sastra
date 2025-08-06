@@ -3,34 +3,33 @@
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1>
-                        <i class="fas fa-book mr-1"></i>
-                        {{ $title }}
-                    </h1>
-                </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item">
-                            <a href="{{ route('admin.dashboard.index') }}">
-                                <i class="nav-icon fas fa-home mr-1"></i>
-                                Dashboard
-                            </a>
-                        </li>
-
-                        <li class="breadcrumb-item active">
+                    <div class="col-sm-6">
+                        <h1>
                             <i class="fas fa-book mr-1"></i>
                             {{ $title }}
-                        </li>
-                    </ol>
-                </div>
+                        </h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item">
+                                <a href="{{ route('admin.dashboard.index') }}">
+                                    <i class="nav-icon fas fa-home mr-1"></i>
+                                    Dashboard
+                                </a>
+                            </li>
+
+                            <li class="breadcrumb-item active">
+                                <i class="fas fa-book mr-1"></i>
+                                {{ $title }}
+                            </li>
+                        </ol>
+                    </div>
                 </div>
             </div>
-            </section>
+        </section>
 
 
-            <section class="content">
-
+        <section class="content">
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between">
@@ -76,7 +75,7 @@
                     </div>
 
                     <div class="table-responsive">
-                        <table class="table table-hover">
+                        <table class="table table-hover table-sm">
                             <thead>
                                 <tr>
                                     <th>No</th>
@@ -114,8 +113,12 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <button wire:click="edit({{ $item->id }})" class="btn btn-sm btn-warning mb-2" data-toggle="modal" data-target="#editModal"><i class="fas fa-edit"></i></button>
-                                            <button wire:click="confirm({{ $item->id }})" class="btn btn-sm btn-danger mb-2" data-toggle="modal" data-target="#deleteModal"><i class="fas fa-trash"></i></button>
+                                            <button wire:click="edit({{ $item->id }})" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editModal">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button wire:click="confirm({{ $item->id }})" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -127,6 +130,7 @@
             </div>
             <!-- /.card -->
         </section>
+
         <!-- /.content -->
 
         {{-- Create Modal --}}

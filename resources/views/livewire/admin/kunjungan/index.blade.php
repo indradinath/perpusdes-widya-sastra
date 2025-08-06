@@ -106,7 +106,7 @@
                                             </button>
                                             <button wire:click="confirm({{ $item->id }})" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal">
                                                 <i class="fas fa-trash"></i>
-                                              </button>
+                                            </button>
                                         </td>
                                     </tr>
                                 @endforeach
