@@ -113,10 +113,10 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <button wire:click="edit({{ $item->id }})" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editModal">
+                                            <button wire:click="edit({{ $item->id }})" class="btn btn-sm btn-warning mb-2" data-toggle="modal" data-target="#editModal">
                                                 <i class="fas fa-edit"></i>
                                             </button>
-                                            <button wire:click="confirm({{ $item->id }})" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal">
+                                            <button wire:click="confirm({{ $item->id }})" class="btn btn-sm btn-danger mb-2" data-toggle="modal" data-target="#deleteModal">
                                                 <i class="fas fa-trash"></i>
                                             </button>
                                         </td>
