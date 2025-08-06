@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
         <a class="navbar-brand" href="{{ route('home') }}">
-            <img src="{{ asset('adminlte3/dist/img/logodesa.png') }}" alt="Logo Desa" style="height: 60px; margin-right: 15px;">
+            <img src="{{ asset('/public/adminlte3/dist/img/logodesa.png') }}" alt="Logo Desa" style="height: 60px; margin-right: 15px;">
             E-Perpus Widya Sastra
         </a>
         <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
